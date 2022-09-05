@@ -1,0 +1,64 @@
+.main-header{
+    background-color:#49b5df;
+    padding: 5px;
+    position: fixed;   /* bu özellik ile header kısmının scroll bar aşagıindiğinde bile    */
+    width: 100%;       /*     yukarı kısım da sabit kalmasını sağlıyor                     */
+    top: 0;            /*    width: 100%;   ve  top: 0;  özelliklerini eklemelisin         */
+    z-index:25;
+    
+}
+.main-nav{
+    display: inline-block;
+    color: #DFF6FF;
+    text-align: right;
+    width: calc(100% - 29px);
+}
+
+.nav-ul{
+    list-style: none;
+    padding: 0px;
+    margin: 7px;
+
+}
+
+.nav-ul-li{
+    display: inline-block;
+    margin: 0px 3px;
+    
+}
+
+.logo{
+    color: white;
+    font-size: 20px;
+    height: 50px;
+}
+
+.div-logo{
+    display: inline;
+    border-radius: 30px;
+   height: 40px;
+   width: 40px;
+   margin: 0px;
+   padding: 0px;
+   position:absolute;
+   top: 2px;
+   left: 15px;
+
+}
+.nav-ul-li a{
+    text-decoration: none;
+    color: #0F044C;
+    padding: 2px;
+    left: 10px;
+}
+
+ .main-header a:hover{
+    background-color: #EEEEEE;
+    color: #0F044C;
+    border-radius: 5px;
+    padding: 0px 2px;
+}
+#icon-search{
+    font-size: me;
+    color: #0F044C;
+}

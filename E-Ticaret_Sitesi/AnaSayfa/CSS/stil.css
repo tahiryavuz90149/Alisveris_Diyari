@@ -1,0 +1,149 @@
+
+
+        * {
+            box-sizing: border-box;
+        
+         }
+
+        body{
+            margin: 0px;
+            background-color: aliceblue;
+        }
+
+             
+        .menü{
+            display:inline-block;
+            width:15%;
+            height: 1000px;
+            margin: 74px 5px;
+            vertical-align: top;
+            border: 2px solid #3a4855;
+        }
+        
+        .menü ul{
+         list-style: none;
+            padding: 0px;
+            margin: 5px;
+            text-align: left;
+        }
+        .menü-ul-li{
+            text-decoration: none;
+            font-size: 18px;
+            width: 98%;  
+            border: 1px solid #888;
+            margin-bottom: 5px;
+            background-color: #EEEEEE;
+
+        
+        }
+        .menü-ul-li a{
+            text-decoration: none;
+            color: #0F044C;
+            font-weight: bold;
+            padding-left: 5px;
+            
+        }
+
+        .menü-ul-li ul{
+            display: none;
+        }
+
+        .menü-ul-li:hover ul{
+            display:block;
+	        position:absolute;
+            margin:-28px 183px;
+        
+        }
+        .menü-ul-li:hover ul a{
+            background-color: #ECECEC;
+            color:#0F044C;
+            width: 100%;
+            display: block;
+        }
+
+        .Anakisim{
+            display: inline-block;
+            width: 82%;
+            height: 600px;
+            margin: 30px 5px;
+        }
+        .Anakisim-row,.Anakisim-favori-row{
+            margin-bottom: 10px;
+            height: 400px;
+        }
+
+        .Anakisim-column{
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            width: calc(25% - 15px);
+            height: 395px;
+            background-color: #f0f1f5;
+            border-radius: 30px;
+            color: black;
+            
+        }
+        .column-img{
+            height: 170px;
+            margin: 10px 10px -6px 10px;
+            padding: 0px;
+            border: 1px solid black; 
+            background-color: white;
+        }
+        img{
+            width: 239px;
+            height: 168px;
+        }
+        .column-açıklama{
+            font-size: 14px;
+            position: relative;
+            height: 165px;
+            margin: 10px;
+        }
+        .btn-sepet{
+            position: absolute;
+            top: 160px;
+            left: 50px;
+            width: 137px;
+        }
+        
+        .footer{
+            position: absolute;
+            top: 10px;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 50px;
+            padding:15px;   
+        }
+        .footer-div{
+            background-color: honeydew;
+            height: 70px;
+            margin: 5px;
+            text-align: center;
+            border: 1px solid black;
+            margin-top: 175px;
+            border-radius: 5px;
+            
+        }
+        .footer-row{
+            height: 70px;
+        }
+        .footer-column{
+            width: 60px;
+            display: inline-block;
+            margin: 3px;
+        }
+        #social-media{
+            font-size: 40px;
+            margin-top: 14px;
+            margin-bottom: 9px;
+            
+        }
+        #social-media:hover{
+            border: 1px solid #888;
+            border-radius: 5px;
+        }
+
+   

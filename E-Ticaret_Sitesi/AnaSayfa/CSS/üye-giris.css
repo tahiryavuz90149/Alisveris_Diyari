@@ -1,0 +1,58 @@
+body{
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
+.card{
+    margin: 50px 400px;
+    height: 550px;
+    opacity: 99%;
+    border-radius: 20px;
+    border: 1px solid #888;
+    padding: 10px;
+
+}
+.btn{
+    position: absolute;
+    left: 68px;
+    top: 410px;
+    width: 200px;
+    font-size: 20px;
+}
+.tablo1{
+    position: absolute;
+    left: 100px;
+    top: 40px;
+  }
+  
+  .tablo2{
+    position: absolute;
+    left: 100px;
+    top: 100px;
+  }
+  
+  .btnGiris{
+    position: absolute;
+    left: 76px;
+    top: 303px;
+  } 
+ 
+  .btn0{
+  position: absolute;
+  top: 20px;
+  left: 330px;
+  margin-top: 5px;
+}
+
+.btn1{
+  position: absolute;
+  top: 300px;
+  left: 110px;
+  margin-top: 5px;
+}
+
+.btn2{
+  position: absolute;
+  top: 300px;
+  left: 1021px;
+  margin-top: 5px;
+}
