@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../AnaSayfa/CSS/header.css">
     <link rel="stylesheet" href="../AnaSayfa/CSS/üye-giris.css">
     
-    <title>Üye Ol/Giriş Yap</title>
+    <title>Giriş Yap</title>
     
 </head>
 <body>
@@ -60,7 +60,7 @@
                   <td style="width: 100px; padding: 15px;">E-Posta :</td>
                   <td>
                    
-                      <input type="email" name="mail"placeholder="E-Posta adresini girin"/>
+                      <input class = "input" type="email" name="mail"placeholder="E-Posta adresini girin"/>
                     
                   </td>
                 </tr>
@@ -70,7 +70,7 @@
                   <td style="width: 100px; padding: 15px;">Şifre :</td>
                   <td>
                    
-                      <input type="password" name="sifre" placeholder="Şifrenizi girin" />
+                      <input class = "input" type="password" name="sifre" placeholder="Şifrenizi girin" />
                     
                   </td>
                 </tr>

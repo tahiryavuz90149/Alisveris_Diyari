@@ -1,21 +1,26 @@
 body{
     box-sizing: border-box;
-    background-color: aliceblue;
+    background-color: white;
 }
 .card{
-    margin: 50px 400px;
-    height: 550px;
-    opacity: 99%;
-    border-radius: 20px;
-    border: 1px solid #888;
-    padding: 10px;
+  margin: 59px 336px;
+  height: 550px;
+  opacity: 99%;
+  border-radius: 12px;
+  border: 16px double red;
+  padding: 10px;
+  border-bottom-right-radius: 194px;
+  left: -265px;
+  font-family: emoji;
+  border-style: double solid solid double;
+  box-shadow: 10px 10px;
 
 }
 .btn{
-    position: absolute;
-    left: 68px;
-    top: 410px;
-    width: 200px;
+  position: absolute;
+    left: 10px;
+    top: 367px;
+    width: 418px;
     font-size: 20px;
 }
 .tablo1{
@@ -32,7 +37,6 @@ body{
   
   .btnGiris{
     position: absolute;
-    left: 76px;
     top: 303px;
   } 
  
@@ -44,15 +48,18 @@ body{
 }
 
 .btn1{
-  position: absolute;
-  top: 300px;
-  left: 110px;
-  margin-top: 5px;
+    position: absolute;
+    top: 223px;
+    left: 828px;
+    margin-top: 5px;
 }
 
 .btn2{
   position: absolute;
   top: 300px;
-  left: 1021px;
+  left: 828px;
   margin-top: 5px;
+}
+.input{
+  width: 320px;
 }

@@ -8,41 +8,49 @@
         body{
             margin: 0px;
             background-color: aliceblue;
+            height: 100%;
+
+        
         }
 
              
         .menü{
-            display:inline-block;
-            width:15%;
-            height: 1000px;
-            margin: 74px 5px;
+            display: inline-block;
+            width: 15%;
+            height: 1633px;
+            margin-top: 94px;
+            margin-left: 2px;
             vertical-align: top;
-            border: 2px solid #3a4855;
+            border: 2px solid red;
+            border-radius: 5px;
+            
         }
         
         .menü ul{
          list-style: none;
-            padding: 0px;
+            padding: 3px;
             margin: 5px;
             text-align: left;
         }
         .menü-ul-li{
             text-decoration: none;
             font-size: 18px;
-            width: 98%;  
-            border: 1px solid #888;
+            width: 98%;
+            border: 4px double red;
             margin-bottom: 5px;
-            background-color: #EEEEEE;
-
+            background-color: #ffffff;
+            font-family: initial;
+            border-radius: 3px;
         
         }
         .menü-ul-li a{
             text-decoration: none;
-            color: #0F044C;
-            font-weight: bold;
-            padding-left: 5px;
+            color: black;
+            font-weight: 500;
+            padding-left: 15px;
             
         }
+        
 
         .menü-ul-li ul{
             display: none;
@@ -51,21 +59,39 @@
         .menü-ul-li:hover ul{
             display:block;
 	        position:absolute;
-            margin:-28px 183px;
+            margin:-34px 168px;
+            width: 100px;
         
         }
+        .menü-ul-li:hover {
+           background-color: red;
+        
+        }
+        .menü-ul-li:hover a{
+            color: white;
+         
+         }
         .menü-ul-li:hover ul a{
-            background-color: #ECECEC;
-            color:#0F044C;
+            background-color: white;
+            color:black;
             width: 100%;
             display: block;
+        }
+        .menü-ul-li:hover ul:hover a{
+            color:white;
+            background: red;
+            border:1px solid white;
+            
         }
 
         .Anakisim{
             display: inline-block;
             width: 82%;
-            height: 600px;
-            margin: 30px 5px;
+            height: 1770px;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+           
         }
         .Anakisim-row,.Anakisim-favori-row{
             margin-bottom: 10px;
@@ -75,20 +101,21 @@
         .Anakisim-column{
             margin-left: 10px;
             margin-top: 10px;
-            margin-bottom: 10px;
             display: inline-block;
             width: calc(25% - 15px);
             height: 395px;
-            background-color: #f0f1f5;
-            border-radius: 30px;
+            background-color: white;
+            border-radius: 10px;
             color: black;
+            border: 1px solid black;
             
         }
+        
         .column-img{
             height: 170px;
             margin: 10px 10px -6px 10px;
             padding: 0px;
-            border: 1px solid black; 
+            border: 0px solid black; 
             background-color: white;
         }
         img{
@@ -101,49 +128,93 @@
             height: 165px;
             margin: 10px;
         }
+        .fiyat{
+            font-weight: bold; 
+            position: absolute; 
+            bottom: 5px; 
+            width: 240px;
+            text-align: center;
+            font-family: ui-sans-serif;
+            font-size: large;
+        }
+         
+        
         .btn-sepet{
             position: absolute;
             top: 160px;
             left: 50px;
             width: 137px;
+           
         }
         
         .footer{
-            position: absolute;
-            top: 10px;
+            position: relative;
             bottom: 0px;
             left: 0px;
             width: 100%;
-            height: 50px;
-            padding:15px;   
+            height: 176px;
+            padding: 4px;
+            background:#222222;
+            display: flex;
         }
+
+        .kutu{
+            height: 159px;
+            width: 33%;
+            margin: 5px;
+            justify-content: space-between;
+            color: white;
+            padding-left: 32px;
+
+        }
+
+    
         .footer-div{
             background-color: honeydew;
             height: 70px;
+            width: 1340px;
             margin: 5px;
             text-align: center;
             border: 1px solid black;
-            margin-top: 175px;
+            margin-top: 15px;
             border-radius: 5px;
-            
+            position: relative;
+            bottom: 20px;
         }
+       
+    
         .footer-row{
             height: 70px;
+            
         }
         .footer-column{
             width: 60px;
             display: inline-block;
-            margin: 3px;
+            margin-left: 47px;
         }
         #social-media{
-            font-size: 40px;
-            margin-top: 14px;
-            margin-bottom: 9px;
+            font-size: 68px;
+            margin-top: 42px;
+            margin-left: -90px;
+            color: whitesmoke;
             
         }
         #social-media:hover{
-            border: 1px solid #888;
-            border-radius: 5px;
+            background-color: grey;
+            border: 0px solid #888;
+            border-radius: 12px;
         }
-
-   
+        .tutar{
+            background-color: #f9fafb;
+            height: 80px;
+            font-family: serif;
+            width: 153px;
+            color: currentColor;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            position: fixed;
+            top: 570px;
+            right: 0px;
+            border: 2px solid rgb(209, 18, 18);
+        }    
+            

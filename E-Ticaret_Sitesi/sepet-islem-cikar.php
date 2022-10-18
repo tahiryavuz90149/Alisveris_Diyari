@@ -13,10 +13,11 @@ $sqlStr = "DELETE FROM `sepet` WHERE kullanici_id ='".$kullanici_id."' && urun_i
 if($baglan -> query($sqlStr) === TRUE){
     echo "<script> alert('Ürününüz başarılı bir şekilde sepetinizden çıkarıldı')</script>";
      echo "
-         <script>
-         window.location.href = 'satici_anasayfa.php';
-        </script>";
-}else{
+         <script> 
+         window.location.replace('http://localhost/Proje/E-Ticaret_Sitesi/sepet.php?kullaniciId=".$kullanici_id."');
+        </script>"; // yukarıdaki satırda replace özelliği kullanılarak sepetten ürün çıkardığında tekrar sepet içine gitmesi sağlandı. 
+                    //window.location.href = 'satici_anasayfa.php'; eski kod satici sayfasına gitmek için kullanıldı.
+    }else{
     echo "<script> alert('Üzgünüz!!! Ürününüz sepetinizden çıkartılırken bir hata oluştu.')</script>".$baglan->error;
 }
 

@@ -1,5 +1,5 @@
 .main-header{
-    background-color:#49b5df;
+    background-color:red;
     padding: 5px;
     position: fixed;   /* bu özellik ile header kısmının scroll bar aşagıindiğinde bile    */
     width: 100%;       /*     yukarı kısım da sabit kalmasını sağlıyor                     */
@@ -47,16 +47,16 @@
 }
 .nav-ul-li a{
     text-decoration: none;
-    color: #0F044C;
-    padding: 2px;
-    left: 10px;
+    color: black;
+    left: -4px;
+    text-align: -webkit-left;
 }
 
+
  .main-header a:hover{
-    background-color: #EEEEEE;
-    color: #0F044C;
+    background-color:red ;
+    color: white;
     border-radius: 5px;
-    padding: 0px 2px;
 }
 #icon-search{
     font-size: me;

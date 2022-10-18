@@ -16,7 +16,7 @@ if(isset($_SESSION['loggedIn'])){
 $islogged = false;
 }
 
-$kullaniciId = $_SESSION["kullaniciId"];
+ $kullaniciId = $_SESSION["kullaniciId"]; 
 
 $urunler = $baglan->query("SELECT * FROM urun "); 
 $kategoriler = $baglan->query("SELECT * FROM kategori WHERE ust_kategori_id = 0 ");
@@ -90,35 +90,46 @@ $kategoriler = $baglan->query("SELECT * FROM kategori WHERE ust_kategori_id = 0 
 
         <main class="Anakisim">
             
-            <h5 style="text-align: center; margin-bottom: 2px;"><b>İlginizi Çekebilecek Ürünler</b></h5>
+            <h5 style="text-align: center; margin-bottom: 2px; margin-top: 50px;"><b>İlginizi Çekebilecek Ürünler</b></h5>
             
             <div class="Anakisim-favori-row">
                 <?php
+                    
+                    $cardSayisi = 0;
 
-                    while($row = $urunler->fetch_assoc()){
+                    while($row = $urunler->fetch_assoc())
+                    {
+                       
+                        if($cardSayisi <= 15)
+                        {
+                            $kısaAciklama = $row['urun_aciklama'];
+                            $kısaAciklama = (strlen($kısaAciklama) > 50) ? substr($kısaAciklama,0,80).'...' : $kısaAciklama;
 
-                        $kısaAciklama = $row['urun_aciklama'];
-                        $kısaAciklama = (strlen($kısaAciklama) > 30) ? substr($kısaAciklama,0,30).'...' : $kısaAciklama;
+                            $name = $row['urun_adi'];
+                            $name = (strlen($name) > 25) ? substr($name,0,25).'...' : $name;
 
-                        $name = $row['urun_adi'];
-                        $name = (strlen($name) > 20) ? substr($name,0,20).'...' : $name;
+                            echo '
+                            <div class="Anakisim-column">
+                                <div class="column-img">
+                                <a href="../ürün-detay.php?id='.$row["urun_id"].'">
+                                
+                                    <img src="'.$row["imagePath"].'" >
+                                    </a>
+                                </div>
+                                <div class="column-açıklama">
+                                    <p> <b>'.$name.'</b>  <br> '.$kısaAciklama.'<br> </p>
+                                    <div class="fiyat">
+                                    <p > '.$row["fiyati"].' TL  </p>
+                                    </div>
+                                    <a  href="../üye-ol/üye-ol.php" class=" btn btn-sepet btn-sm btn-outline-danger" >Sepete Ekle</a>
 
-                        echo '
-                        <div class="Anakisim-column">
-                            <div class="column-img">
-                            <a href="../ürün-detay.php?id='.$row["urun_id"].'">
-                            
-                                <img src="'.$row["imagePath"].'" >
-                                </a>
-                            </div>
-                            <div class="column-açıklama">
-                                <p> <b>'.$name.'</b>  <br> '.$kısaAciklama.'<br> '.$row["fiyati"].' TL </p>
-                                <a  href="../üye-ol/üye-ol.php" class="btn btn-sepet btn-sm btn-outline-danger" >Sepete Ekle</a>
+                                </div>
+                            </div>';
+                            $cardSayisi+=1;
 
-                            </div>
-                        </div>';
-
-                   }
+                    
+                        }
+                    }
 
 
                 ?>
@@ -126,19 +137,40 @@ $kategoriler = $baglan->query("SELECT * FROM kategori WHERE ust_kategori_id = 0 
             
         </main>
 </div>
+
 <footer>
-    <div class="footer-div">
-        <div class="footer-row">
-            <div class="footer-column"> <i class="fa-brands fa-facebook" id="social-media"></i> </div>
-            <div class="footer-column"> <i class="fa-brands fa-instagram" id="social-media"></i> </div>
-            <div class="footer-column"> <i class="fa-brands fa-twitter" id="social-media"></i> </div>
-        
-            
+     <div class="footer">
+        <div class = "kutu" >
+            <b>Sayfalar</b>
+                    <ul>
+                        <li><a href="index.php" style = "color: white;" >AnaSayfa</a></li>
+                        <li>Hakkımızda</li>
+                        <li>Çalışmalarımız</li>
+                        <li>Referanslarımız</li>
+                    </ul>
         </div>
-
+        <div class = "kutu" >
+            <b>İletişim</b>
+                    <ul>
+                        <li>Tahir Yavuz</li>
+                        <li>C: 0 536 976 48 32</li>
+                        <li>T: 0 242 659 62 61</li>
+                        <li>M: 193301047@ogr.selcuk.edu.tr</li>
+                        <li>M: yavuzthr90149@gmail.com</li>
+                    </ul>
+        </div>
+        <div class = "kutu" >
+            <a href ="https://www.facebook.com/tahir.yavuz.520"> <div class="footer-column"> <i class="fa-brands fa-facebook" id="social-media"></i> </div></a> 
+            <a href ="https://www.instagram.com/tahiryvz_07/"> <div class="footer-column"> <i class="fa-brands fa-instagram inst" id="social-media"></i> </div></a>
+            <a href ="https://twitter.com/TahirYavuz07"> <div class="footer-column"> <i class="fa-brands fa-twitter" id="social-media"></i> </div></a>
+        </div>
+       
+        
+                
     </div>
+    
 </footer>
-
+   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
 
 </script>

@@ -10,7 +10,7 @@
     <style>
 
 body{
-    background-color: aliceblue;
+    background-color: white;
 }
 .resim-div{
     margin: 103px 0px 0px 10px;

@@ -81,13 +81,14 @@ $kategoriler = $baglan->query("SELECT * FROM kategori WHERE ust_kategori_id = 0 
 
         <main class="Anakisim">
 
-            <h5 style="text-align: center; margin-bottom: 2px;">---------------------------------</h5>
+        
+            <h5 style="text-align: center; margin-bottom: 2px; margin-top: 50px;"><b>Sepetim</b></h5>
+
             
-            <h5 style="text-align: center; margin-bottom: 2px;"><b>Sepetim</b></h5>
             
             <div class="Anakisim-favori-row">
                 <?php
-
+                    $toplamTutar = 0;
                     while($row = $sepetQuery->fetch_assoc()){
 
                         $kısaAciklama = $row['urun_aciklama'];
@@ -95,19 +96,21 @@ $kategoriler = $baglan->query("SELECT * FROM kategori WHERE ust_kategori_id = 0 
 
                         $name = $row['urun_adi'];
                         $name = (strlen($name) > 20) ? substr($name,0,20).'...' : $name;
+                        $toplamTutar += $row["fiyati"];
 
                         echo '
+                        
                         <div class="Anakisim-column">
-                        <a href="ürün-detay.php?id='.$row["urun_id"].'">
+                            <a href="ürün-detay.php?id='.$row["urun_id"].'">
                             <div class="column-img">
                         
                                 <img src="'.$row["imagePath"].'" > 
                             </div></a>
                             <div class="column-açıklama">
-                                <p> <b>'.$name.'</b>  <br> '.$kısaAciklama.'<br> '.$row["fiyati"].' TL
+                                <p> <b>'.$name.'</b>  <br> '.$kısaAciklama.'<br> '.$row["fiyati"].' TL 
                                 </p>
                                 <button type="submit" class="btn btn-sepet btn-sm btn-outline-danger" onclick="location.href=\'sepet-islem-cikar.php?urun_id='.$row["urun_id"].'&kullanici_id='.$kullaniciId.'\'" >Sepetten Çıkar</button>
-
+                                
                             </div>
                          </div>';
                     }
@@ -117,6 +120,13 @@ $kategoriler = $baglan->query("SELECT * FROM kategori WHERE ust_kategori_id = 0 
             </div>
             
         </main>
+    </div>
+
+    <div class =tutar>
+        <?php  echo' 
+            <p> <b>SEPET TUTARI</b> </p>
+            <p> <b>  '.$toplamTutar.' TL</b> </p>'
+        ?>  
     </div>
     <footer>
         <div class="footer-div">
